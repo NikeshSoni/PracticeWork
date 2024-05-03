@@ -19,7 +19,7 @@ const Example = () => {
     <div className='row'>
         { eProduct && eProduct.map((items , index) => {
              return (
-                    <div >
+                    <div key={index}>
                         <div>{items.title}</div>
                     </div>
              )

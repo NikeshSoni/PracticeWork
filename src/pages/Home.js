@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import Example from '../components/API/Example';
 import TrayApi from '../components/API/TrayApi';
+import Dashboard from './Private/Dashboard';
 
 const Home = () => {
   return (
@@ -9,7 +10,8 @@ const Home = () => {
         <Navbar />
         <h1>i am Home</h1>
         {/* <Example /> */}
-        <TrayApi />
+        {/* <TrayApi /> */}
+        {/* <Dashboard /> */}
     </div>
   )
 }
