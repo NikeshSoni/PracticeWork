@@ -8,7 +8,7 @@ const Login = () => {
   const [changeItem, setChangeItem] = useState("Show Password");
   const [loginItem, setLoginItem] = useState(true);
   const [change, setChange] = useState("password");
-  
+
   const [formData, setFormData] = useState({
     password: '',
     email: '',
@@ -49,7 +49,7 @@ const Login = () => {
     <>
       <NavbarHeader />
       <div className='row'>
-        <form onSubmit={handleSubmit} className='container col-5 mt-2'>
+        <form onSubmit={handleSubmit} className='container col-9 col-md-6 col-lg-5 mt-2'>
 
           <div className='text-center mt-2'>
             <h3>
