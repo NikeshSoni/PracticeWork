@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar/Navbar';
 import Example from '../components/API/Example';
 import TrayApi from '../components/API/TrayApi';
 import Dashboard from './Private/Dashboard';
+import Learning from '../components/Hooks/CallBack/Learning';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         {/* <Example /> */}
         {/* <TrayApi /> */}
         {/* <Dashboard /> */}
+        <Learning />
     </div>
   )
 }
