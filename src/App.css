@@ -2,3 +2,15 @@
 a{
   text-decoration: none !important;
 }
+
+.videoPlay{
+    width: 50%;
+    height: 50%;
+}
+
+.center-all-data {
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  flex-direction: column;
+}
