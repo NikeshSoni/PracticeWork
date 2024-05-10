@@ -4,35 +4,34 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 const Login = () => {
+    const [changeItem, setChangeItem] = useState("Show Password");
+    const [loginItem, setLoginItem] = useState(true);
+    const [change, setChange] = useState("password");
 
-  const [changeItem, setChangeItem] = useState("Show Password");
-  const [loginItem, setLoginItem] = useState(true);
-  const [change, setChange] = useState("password");
+    const [formData, setFormData] = useState({
+      password: '',
+      email: '',
+    });
 
-  const [formData, setFormData] = useState({
-    password: '',
-    email: '',
-  });
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData({ ...formData, [name]: value });
+    };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        localStorage.setItem('formData', JSON.stringify(formData));
+    };
 
-  const handleSubmit = (e) => {
-      e.preventDefault();
-      localStorage.setItem('formData', JSON.stringify(formData));
-  };
-
-  const handlePassword = () => {
-    if (change === 'password' && changeItem === "Show Password") {
-      setChange('text');
-      setChangeItem("Hide Password")
-    } else {
-      setChange('password');
-      setChangeItem("Show Password")
+    const handlePassword = () => {
+      if (change === 'password' && changeItem === "Show Password") {
+        setChange('text');
+        setChangeItem("Hide Password")
+      } else {
+        setChange('password');
+        setChangeItem("Show Password")
+      }
     }
-  }
 
   const handleLogin = () => {
 
@@ -42,7 +41,7 @@ const Login = () => {
     //   setLoginItem(true)
     // } else (
     //   setLoginItem(false)
-    // )
+    // ) 
   }
 
   return (
@@ -85,14 +84,13 @@ const Login = () => {
 
           <Form.Group>
           <Form.Label>Password</Form.Label>
-
-            <Form.Control
-              type={change}
-              name="password"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Enter Your password"
-            />
+              <Form.Control
+                type={change}
+                name="password"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Enter Your password"
+              />
           </Form.Group>
 
           <Form.Group className="my-2" onClick={handlePassword} controlId="formBasicCheckbox">
@@ -103,7 +101,7 @@ const Login = () => {
             <Button onClick={handleLogin} variant="success">{loginItem ? "Sigin" : "Login"}</Button>
             <Button variant="primary" type="submit"> Submit </Button>
           </div>
-        </form>
+        </form> 
       </div>
     </>
   )

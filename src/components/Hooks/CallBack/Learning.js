@@ -43,6 +43,7 @@ const Learning = () => {
             */}
 
             <Child callData={callData}/> 
+            {/* <Child />  */}
 
 
             <p>Count - {callState}</p>

@@ -6,18 +6,28 @@ import Dashboard from './Private/Dashboard';
 import Learning from '../components/Hooks/CallBack/Learning';
 import Mount from '../components/lifeCycle/Mount';
 import VideoPlay from '../components/Hooks/useRef/VideoPlay';
-
+import ContextApiData from '../components/Hooks/ContextApi/Index';
+import UseContextData from '../components/API/useContext/Index';
 const Home = () => {
   return (
     <div>
         <Navbar />
+
         {/* <h1>i am Home</h1> */}
         {/* <Example /> */}
         {/* <TrayApi /> */}
         {/* <Dashboard /> */}
         {/* <Learning /> */}
         {/* <Mount /> */}
-        <VideoPlay />
+        {/* <VideoPlay /> */}
+
+        {/* Context Api */}
+
+        {/* <ContextApiData />  */}
+
+        <UseContextData />
+
+
     </div>
   )
 }
