@@ -8,7 +8,11 @@ import Mount from '../components/lifeCycle/Mount';
 import VideoPlay from '../components/Hooks/useRef/VideoPlay';
 import ContextApiData from '../components/Hooks/ContextApi/Index';
 import UseContextData from '../components/API/useContext/Index';
+import CardProject from '../components/API/CardProject';
+
+import Search from '../components/SearchFilter/Search';
 const Home = () => {
+
   return (
     <div>
         <Navbar />
@@ -25,7 +29,11 @@ const Home = () => {
 
         {/* <ContextApiData />  */}
 
-        <UseContextData />
+          {/* <UseContextData /> */}
+
+        {/* <CardProject /> */}
+
+        <Search />
 
 
     </div>

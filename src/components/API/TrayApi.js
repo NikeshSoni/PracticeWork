@@ -3,7 +3,7 @@ import {useEffect , useState , useFetch} from 'react';
 
 const TrayApi = () => {
 
-    const [trayApi , settrayApi ] = useState();
+    const [trayApi , setTrayApi ] = useState();
 
     useEffect( () => {
 
@@ -20,7 +20,7 @@ const TrayApi = () => {
                }
         }
 
-        responceApi(settrayApi)
+        responceApi(setTrayApi)
     },[])
 
     console.log(trayApi);
