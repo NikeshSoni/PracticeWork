@@ -4,7 +4,7 @@ import { Outlet , Navigate } from 'react-router-dom';
 
 const Dashboard = () => {
 
-    const outComeData = false;
+    const outComeData = true;
 
     if (outComeData) {
         return  <Outlet />

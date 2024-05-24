@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState} from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import Example from '../components/API/Example';
 import TrayApi from '../components/API/TrayApi';
@@ -11,6 +11,9 @@ import UseContextData from '../components/API/useContext/Index';
 import CardProject from '../components/API/CardProject';
 
 import Search from '../components/SearchFilter/Search';
+
+import AxiosApi from '../components/API/Axios/AxiosApi';
+import AxiosPost from '../components/API/Axios/AxiosPost'
 const Home = () => {
 
   return (
@@ -20,7 +23,7 @@ const Home = () => {
         {/* <h1>i am Home</h1> */}
         {/* <Example /> */}
         {/* <TrayApi /> */}
-        {/* <Dashboard /> */}
+        <Dashboard />
         {/* <Learning /> */}
         {/* <Mount /> */}
         {/* <VideoPlay /> */}
@@ -33,9 +36,15 @@ const Home = () => {
 
         {/* <CardProject /> */}
 
-        <Search />
+        {/* <Search /> */}
 
 
+        <AxiosApi />
+        {/* <AxiosPost /> */}
+
+
+       
+  
     </div>
   )
 }

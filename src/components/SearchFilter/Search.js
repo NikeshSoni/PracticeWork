@@ -3,14 +3,13 @@ import {Form} from 'react-bootstrap'
 
 const Search = () => {
 
-    
-  const names = ['Nikesh' ,'Nikki' , 'Harry' , 'Toxic'];
-
+    const names = ['Nikesh' ,'Nikki' , 'Harry' , 'Toxic'];
 
     const [filterList , setFilterList] = useState('');
+    
 
     const getItem = (e) => {
-            setFilterList(e.target.value)
+            setFilterList(e.target.value)   
     }
 
     const userInput = names.filter(  (e) =>  
@@ -33,8 +32,6 @@ const Search = () => {
                 {userInput.map( (items , index) => {
                     return <li key={index}>{items}</li>
                 })}
-
-            {/* {filterList && filterList.map( (items))} */}
             </ul>
     </div>
   )
