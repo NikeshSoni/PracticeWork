@@ -22,7 +22,7 @@ const Index = () => {
         <h1>
             Learning usecontext 
         </h1>
-
+        
         <contextData.Provider value={name}>
             <contextInfo.Provider value={lastName}>
                  <ChildA />

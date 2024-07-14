@@ -1,37 +1,53 @@
-import {useEffect , useState , useFetch} from 'react';
+import {useEffect , useState } from 'react';
 
 
 const TrayApi = () => {
 
-    const [trayApi , setTrayApi ] = useState();
+    const [trayApi , setTrayApi ] = useState([]);
+    const [filter , setFilter ] = useState('');
+    const [filterData , setFilterData ] = useState([]);
 
     useEffect( () => {
 
         const responceApi = async (apiProduct) => {
             try {
-                    const apiInfo = await fetch('https://fakestoreapi.com/products');
+                    const apiInfo = await fetch('https://jsonplaceholder.typicode.com/users');
                     const changeFormat = await apiInfo.json();
-                    const mainData =  apiProduct(changeFormat);
-
-                    console.log(mainData);
-                   
+                     apiProduct(changeFormat);
                } catch (error) {
                    console.log(error);
                }
         }
-
+        
         responceApi(setTrayApi)
     },[])
 
-    console.log(trayApi);
+
+    useEffect( () => {
+        setFilterData(
+            trayApi.filter( (data) => 
+                data.name.toLowerCase().includes(filter.toLowerCase())
+            )
+        )
+
+       
+    },[filter, trayApi])
+   
+
+
+    // console.log(trayApi);
 
   return (
     <div>   
-            {trayApi && trayApi.map( (items , index) => {
+
+        <div>
+            <input type='text' value={filter} onChange={(e) => setFilter(e.target.value)} className='p-3 my-3' />
+        </div>
+            {filterData && filterData.map( (items , index) => {
                  return(
-                    <div key={index}>
+                    <div key={index.id}>
                         <p>
-                            {items.title}
+                            {items.name}
                         </p>
                     </div>
                  )

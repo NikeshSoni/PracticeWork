@@ -4,16 +4,14 @@ import {Form} from 'react-bootstrap'
 const Search = () => {
 
     const names = ['Nikesh' ,'Nikki' , 'Harry' , 'Toxic'];
-
     const [filterList , setFilterList] = useState('');
     
-
     const getItem = (e) => {
-            setFilterList(e.target.value)   
+          setFilterList(e.target.value)   
     }
 
-    const userInput = names.filter(  (e) =>  
-         e.toLowerCase().includes(filterList.toLowerCase())
+       const userInput = names.filter(  (e) =>  
+          e.toLowerCase().includes(filterList.toLowerCase())
        )
 
   return (
@@ -27,14 +25,12 @@ const Search = () => {
                         placeholder="Enter Your Userid"
                     />
             </Form.Group>
-
             <ul>
                 {userInput.map( (items , index) => {
                     return <li key={index}>{items}</li>
                 })}
             </ul>
     </div>
-  )
-}
+  )}
 
 export default Search
